@@ -3,7 +3,7 @@
 
 ## About
 
-This project aims to demonstrate scraping techniques using Python scrapy library on the school catalogue published at https://www.atlasskolstvi.cz.
+This project aims to demonstrate basic scraping techniques using Python scrapy library on the school catalogue published at https://www.atlasskolstvi.cz.
 
 ## Requirements
 
@@ -27,11 +27,9 @@ Further, run  the below command to activate your virtual environement.
 ```bash
 ./venv/Scripts/activate
 
-pip
+pip install -r requirements.txt
+pip list
 ```
-
-
-
 
 ## Scrapy setup
 
@@ -43,4 +41,17 @@ scrapy genspider atlasskol atlasskolstvi.cz
 
 ```
 
+## Settings 
 
+Set `DATA_OUT` in `src/settings.py` to a path on your computer where crawled data will be stored.
+
+Inspect other settings to fit your needs.
+
+
+## Run
+
+Woohoo!
+
+```
+scrapy crawl atlasskol
+```
